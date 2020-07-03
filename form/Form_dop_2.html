@@ -27,7 +27,7 @@
          </fieldset>
          <fieldset>
              <legend>Дата рождения</legend>
-             <input type="text" placeholder="День" pattern="[0-9]{1,4}"><!--text:Год рождения 4-е цифры--> <br>
+             <input type="text" placeholder="Год" pattern="[0-9]{1,4}"><!--text:Год рождения 4-е цифры--> <br>
              <select name="month">
                  <option value="1">Январь</option>
                  <option value="2">Февраль</option>
@@ -42,7 +42,7 @@
                  <option value="11">Ноябрь</option>
                  <option value="12">Декабрь</option>
              </select><!--select:Месяц рождения--> <br>
-             <input type="text" placeholder="Год"><!--text:Диапозон от 1 до 31 с шагом 1--> <br>
+             <input type="number" min="1" max="31" step="1" placeholder="День"><!--text:Диапозон от 1 до 31 с шагом 1--> <br>
          </fieldset>
          <select name="nachin" required>
              <option value="1">РБ</option>
