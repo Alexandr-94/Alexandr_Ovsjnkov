@@ -14,20 +14,20 @@
     <fieldset >
        <legend>Личные данные</legend>
         <lable>
-            <input type="text" placeholder="Фамилия" required size="25" autofocus pattern="[А-Яа-яЁё]"> <!--text: Только кириллица, без пробелов, длинна поля 25,обязательное поле, автофокус на данном поле--> <br>
-            <input type="text" placeholder="Имя" required size="20"> <!-- text: Только кириллица, без пробелов, длинна поля 25,обязательное поле--> <br>
-            <input type="text" placeholder="Отчество" required size="24"> <!--text: Только кириллица, без пробелов, длинна поля 25,обязательное поле--> <br>
+            <input type="text" name="name" placeholder="Фамилия" required size="25" autofocus pattern="[А-я]{1,30}"> <!--text: Только кириллица, без пробелов, длинна поля 25,обязательное поле, автофокус на данном поле--> <br>
+            <input type="text" name="second_name" placeholder="Имя" required size="20" pattern="[А-я]{1,30}" > <!-- text: Только кириллица, без пробелов, длинна поля 25,обязательное поле--> <br>
+            <input type="text" name="familij" placeholder="Отчество" required size="24" pattern="[А-я]{1-30}"> <!--text: Только кириллица, без пробелов, длинна поля 25,обязательное поле--> <br>
     </lable>
         <fieldset>
             <legend>Паспортные данные</legend>
             <!-- text:Серия - только заглавные латинские буквы с длинной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле.-->
             <!-- text:Нмер паспорта - только цифры с длинной 7 и максимальным количеством 7,количество цифр не больше 7, обязательное поле.-->
-             <input type="text" placeholder="АА" pattern="[A-Z]{1,2}" required>
-             <input type="text" placeholder="1234567" pattern="[0-9]{1,7}" required><br>
+             <input type="text" name="series" placeholder="АА" pattern="[A-Z]{1,2}" required>
+             <input type="text" name="series_1" placeholder="1234567" pattern="[0-9]{1,7}" required><br>
          </fieldset>
          <fieldset>
              <legend>Дата рождения</legend>
-             <input type="text" placeholder="Год" pattern="[0-9]{1,4}"><!--text:Год рождения 4-е цифры--> <br>
+             <input type="text" name="year_of_birth" placeholder="Год" pattern="[0-9]{1,4}"><!--text:Год рождения 4-е цифры--> <br>
              <select name="month">
                  <option value="1">Январь</option>
                  <option value="2">Февраль</option>
@@ -42,7 +42,7 @@
                  <option value="11">Ноябрь</option>
                  <option value="12">Декабрь</option>
              </select><!--select:Месяц рождения--> <br>
-             <input type="number" min="1" max="31" step="1" placeholder="День"><!--text:Диапозон от 1 до 31 с шагом 1--> <br>
+             <input type="number" name="day_birth" min="1" max="31" step="1" placeholder="День"><!--text:Диапозон от 1 до 31 с шагом 1--> <br>
          </fieldset>
          <select name="nachin" required>
              <option value="1">РБ</option>
@@ -50,7 +50,7 @@
              <option value="3">УА</option>
          </select><!--(Национальности выбор одного значения из списка, обязательное поле)--> <br>
          Адрес: <br>
-         <textarea name="address" cols="15" rows="2" placeholder="Адрес проживания"></textarea>
+         <textarea name="address"  cols="15" rows="2" placeholder="Адрес проживания"></textarea>
      </fieldset>
      <fieldset>
          <legend>Интересы</legend>
@@ -65,7 +65,7 @@
          </fieldset>
           <fieldset>
                <legend>Домашние животные</legend>
-         <select multiple size="12" >
+         <select multiple size="12" name="home_animals" >
              <optgroup label="Попугаи">
                  <option value="1">Волнистый</option>
                  <option value="2">Ара</option>
@@ -86,18 +86,18 @@
      </fieldset>
          <fieldset>
              <legend>Данные для входа и востановления пароля</legend>
-             <input type="text" placeholder="Логин" required size="20" ><!--text: Только латинца, без пробелов, не менее 5 символов, длинна поля 20, обязательное поле.--><br>
-             <input type="password" placeholder="Пароль" required autocomplete="off" size="20"><!--password: Только латиница, без пробелов, не менее 10 символов, длинна поля 20, обязательное поле, отключить автозапонение--><br>
+             <input type="text" name="login" placeholder="Логин" required size="20" ><!--text: Только латинца, без пробелов, не менее 5 символов, длинна поля 20, обязательное поле.--><br>
+             <input type="password" name="password" placeholder="Пароль" required autocomplete="off" size="20"><!--password: Только латиница, без пробелов, не менее 10 символов, длинна поля 20, обязательное поле, отключить автозапонение--><br>
          </fieldset>
          <fieldset>
              <legend>Координаты</legend>
-             <input type="email" placeholder="введите адрес почты"><!--email: проверка должна осуществляться спомощью новых атребутов тега--><br>
-             <input type="url" placeholder="введите адрес сайта"><!--url:проверка должна осуществляться спомощью новых атребутов тега--><br>
+             <input type="email" name="email" placeholder="введите адрес почты"><!--email: проверка должна осуществляться спомощью новых атребутов тега--><br>
+             <input type="url" name="url" placeholder="введите адрес сайта"><!--url:проверка должна осуществляться спомощью новых атребутов тега--><br>
          </fieldset>
          <fieldset>
              <legend>Цифры</legend>
-             <input type="number" min="-2,5" max="2,5" step="0,1"><br>
-             <input type="range" min="1" max="10">
+             <input type="number" name="figures" min="-2,5" max="2,5" step="0,1"><br>
+             <input type="range" name="figures_1" min="1" max="10">
          </fieldset>
          <fieldset>
              <legend></legend>
