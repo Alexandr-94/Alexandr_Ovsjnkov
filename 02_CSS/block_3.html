@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .navi{
+            float: left; background-color: darkgray; size: 15em; height: auto; width: 25%;
+        }
+        .content{
+            float: right; width: 75%;
+        }
+        .footer{
+            background-color: darkgray; margin-top: 15px;
+        }
+        .one{ background-color: gray; margin: 0}
+        h1{margin: 0}
+        .two{background-color: gray; margin-top: 5px}
+        
+        .img{float: right}
+    </style>
+</head>
+<body style="background-color: #f3f5f7;">
+<div class="navi" >
+    <h1>Блок навигации</h1>
+    <ul>
+        <li>Ширина 15 em</li>
+        <li>Должен присутствовать цвет фона</li>
+        <li>заспологается слева</li>
+        <li>Блок наполнить контентом достаточным,
+            чтобы по высоте он начинал захватывать вторую статья,
+            как показано в данном примере</li>
+    </ul>
+</div>
+<div class="content">
+<div class="one" >
+<h1>Статья 1</h1>
+    <p>Размер блока:</p>
+    <p>Занимает всю доступную ширину</p>
+    <p>Должен присутствовать цвет фона</p>
+    <p>Во всех "статьях" сделать отступ снизу от соседей равным 2em, при помощи свойства margin-bottom</p>
+</div>
+<div class="two">
+    <h1>Статья 2</h1>
+    <p>Размер блока:</p>
+    <p>Занимает всю доступную ширину</p>
+    <p>Должен присутствовать цвет фона</p>
+    <p>Во всех "статьях" сделать отступ снизу от соседей равным 2em, при помощи свойства margin-bottom.
+        Картинка вставлена при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки</p>
+    <img src="img/hotpng.com.png" class="img">
+    <div style="clear: both;"></div>
+</div>
+</div>
+<div style="clear: both"></div>
+<div class="footer">
+    <p>Нижний блок, подвал. Занимает всю доступную ширину.
+        Выста определяется помещённым  внутрь контейнером.</p>
+</div>
+</body>
+</html>
