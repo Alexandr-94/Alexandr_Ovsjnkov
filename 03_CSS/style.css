@@ -1,0 +1,4 @@
+ul li {display: inline-block;}
+ul.root li ul.child {display: none;}
+ul.root li:hover ul.child {display: block}
+ul>li{ border-style: solid}
